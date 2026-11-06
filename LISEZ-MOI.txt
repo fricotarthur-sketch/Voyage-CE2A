@@ -1,0 +1,16 @@
+VOYAGE SCOLAIRE CE2 — VERSION COLLABORATIVE
+
+Cette version ne fonctionne réellement qu'après configuration. Aucun e-mail n'est encore envoyé.
+
+1. Créer un projet sur https://supabase.com et conserver son URL et sa clé « anon / publishable » (jamais la clé service_role).
+2. Dans Supabase > SQL Editor, exécuter installation.sql.
+3. Dans Authentication > Users, créer un compte enseignant avec l'adresse fricot.arthur@gmail.com et un mot de passe fort. Désactiver les inscriptions publiques dans Authentication > Providers > Email si elles ne sont pas nécessaires.
+4. Dans index.html, remplacer REMPLACER_PAR_URL_SUPABASE et REMPLACER_PAR_CLE_PUBLIQUE_SUPABASE par les deux valeurs du projet.
+5. Déployer le dossier voyage_ce2_online sur Netlify Drop. Les anciens favoris devront pointer vers l'URL du nouveau déploiement, sauf si vous remplacez le contenu du site existant.
+6. Tester sur deux navigateurs : soumettre une mission côté élèves, la voir de l'autre côté, se connecter comme enseignant, valider et vérifier le déblocage sur l'autre ordinateur.
+
+ATTENTION : accès public sans compte = toutes les productions sont lisibles par toute personne possédant l'URL. N'y mettre aucune donnée personnelle, aucun nom d'élève, aucune liste de passagers, aucun renseignement médical. Les missions peuvent être soumises anonymement par quiconque possède le lien. Pour un usage scolaire réel, faire valider l'hébergement, la protection des données et les modalités de sécurité par l'établissement. La clé publique peut figurer dans le site, mais jamais la clé secrète.
+
+NOTIFICATIONS PAR E-MAIL : NON IMPLÉMENTÉES. Elles nécessitent un fournisseur de mails transactionnels et une fonction serveur avec ses secrets, ou une autre intégration. Ne pas communiquer le site comme prêt pour ces notifications avant cette configuration.
+
+Les productions de l'ancienne version locale ne sont PAS transférées automatiquement.
